@@ -5,7 +5,7 @@ caliper-js is a Javascript client for [Caliper](http://www.imsglobal.org/caliper
 
 ## Getting Started
 
-### Pre-requisites for development:  
+### Pre-requisites for development:
 
 * Install npm for your platform
 * npm install -g browserify
@@ -40,3 +40,12 @@ Documentation is available at [http://www.imsglobal.org/caliper](https://www.ims
 Trademark Information- http://www.imsglobal.org/copyright.html
 
 For license information contact, info@imsglobal.org and read the license file contained in the repository.
+
+---
+
+## Appended by harukaeru
+- Since `deep-diff` module is broken when testing 'undefined' variable, I use forked version (More detail, See `test/testUtils.js`)
+- `jsonCompare` function in `test/testUtils.js`, if you don't use `filterCallback`, causes errors. So I commented out
+- You need to install JRE (Java SE Runtime Environment) to use jsdoc
+- jsdoc is to need other dependencies such that I appended to package.json
+- I have no responsibility of this codes. So be careful if you used for production.
