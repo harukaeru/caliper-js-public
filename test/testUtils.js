@@ -32,16 +32,18 @@ var jsonCompare = function (expectedJsonFile, JsonToCompare, t, filterCallback) 
 
   var differences;
 
-  var FIXTURES_BASE_DIR = '../caliper-common-fixtures/src/test/resources/fixtures/';
+  var FIXTURES_BASE_DIR = './caliper-common-fixtures-public/src/test/resources/fixtures/';
   var file = FIXTURES_BASE_DIR + expectedJsonFile + '.json';
   jf.readFile(file, function (err, expectedJson) {
     // console.log("INFO: Loaded JSON from file: " + util.inspect(expectedJson));
     if (_.isNull(expectedJson)) {
       var errMsg = "ERROR: Unable to load specified JSON fixture: " + file;
-      console.log(errMsg);
       differences = errMsg; // define so we trigger failure;
     } else {
       if (_.isUndefined(filterCallback)) {
+        // console.error(expectedJson)
+        // console.error('------------------------------------')
+        // console.error(JsonToCompare)
         differences = diff(expectedJson, JsonToCompare);
       } else {
         differences = diff(expectedJson, JsonToCompare, filterCallback);

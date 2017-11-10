@@ -27,7 +27,8 @@
     "caterpillar-browser": "^2.0.1",
     "caterpillar-filter": "^2.0.3",
     "caterpillar-human": "^2.1.2",
-    "deep-diff": "^0.3.0",
+    "catharsis": "^0.8.9",
+    "deep-diff": "git+https://github.com/cpcallen/diff#fix#102",
     "fs": "0.0.2",
     "grunt": "^0.4.5",
     "grunt-browserify": "^3.1.0",
@@ -42,6 +43,7 @@
     "moment": "^2.10.1",
     "q": "^1.0.1",
     "querystring": "^0.2.0",
+    "taffydb": "^2.7.3",
     "tape": "^3.0.3",
     "url": "^0.10.1"
   }
